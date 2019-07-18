@@ -1,0 +1,23 @@
+#itemDetails {
+    display: inline-block;
+    width: 80%;
+    
+}
+
+#buttonForItem {
+    display: inline-block;
+    width: 20%;
+    text-align: right;
+}
+
+
+#itemsearch {
+    position: relative;
+    font-size: 12px;
+    height: 300px;
+	overflow: scroll
+}
+
+input[type=number]{
+    width: 40px;
+} 

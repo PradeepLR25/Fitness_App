@@ -1,0 +1,89 @@
+            <div className="col-md-8 offset-2">
+              <form className="form-border" name="TDEE">
+              <div className="offset-2">
+                <div className="form-check form-check-inline" >
+           
+                  <div className="form-check" >
+                    <label className="form-check-label">
+                      <input className="form-check-input" type="radio" name="gender"  value="Female"    onClick={this.radioClick}/>
+                      Female
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <label className="form-check-label">
+                      <input className="form-check-input" type="radio" name="gender"  value="Male"  onClick={this.radioClick} />
+                      Male
+                    </label>
+                  </div>
+             
+                </div>
+                
+                <div className="form-check form-check-inline">
+                  <div className="form-check">
+                    <label className="form-check-label">
+                      <input className="form-check-input" type="radio" name="units" id="exampleRadios1" value="Metric" onClick={this.radioClick}/>
+                      Metric (cm, kg, etc.)
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <label className="form-check-label">
+                      <input className="form-check-input" type="radio" name="units" id="exampleRadios2" value="Imperial" onClick={this.radioClick}/>
+                      Imperial (lbs, inches, etc.)
+                    </label>
+                  </div>
+                </div>
+                </div>
+                <div className="form-row align-items-center">
+                    <div className="col-auto form-group">
+                        <label className="form-Weight">Weight</label>
+                        <label className="sr-only" for="form-Height">Weight</label>
+                        <input type="text" className="form-control mb-2 mb-sm-0" id="form-Weight" placeholder="Weight" name="kg" value={this.state.kg} onChange={this.userDetails}/>
+                    </div>
+                    <div className="col-auto form-group">
+                    <label className="form-Height">Height</label>
+                        <label className="sr-only" for="form-Height">Height</label>
+                        <input type="text" className="form-control mb-2 mb-sm-0" id="form-Height" placeholder="Height" name="cm" value={this.state.cm} onChange={this.userDetails}/>
+                    </div>
+                
+                <div className="form-group col-auto">
+                    <label className="form-Age">Age</label>
+                    <label className="sr-only" for="form-Age">Age</label>
+                    <input type="text" className="form-control mb-2 mb-sm-0" id="Form-Age" placeholder="Age" name="age" value={this.state.age} onChange={this.userDetails}/>
+                </div>
+                
+         
+                
+                <div className="form-group col-auto">
+                <label for="exampleFormControlSelect1">Select Activity Level: </label>
+                <label className="sr-only">Select Activity Level:</label>
+                <select className="form-control" id="exampleFormControlSelect1" name="activityLvl" value={this.state.activityLvl} onChange={this.selectActivityLvl} >
+                  <option  value="1.2" >Little to No Exercise</option>
+                  <option  value="1.375">Light Exercise (1-3 hrs/week)</option>
+                  <option  value="1.55">Moderate Exercise (3-5 hrs/week)</option>
+                  <option value="1.725">Heavy Exercise (6-7 hrs/week)</option>
+                  <option value="1.9"> Strenuous Exercise (more than 7 hrs/week)</option>
+                </select>
+             
+              </div>
+              </div>
+                <div className="text-center">
+                <button type="button" className="btn btn-primary btn-sm" onClick={this.calculateBMR}>Calculate BMR and TDEE</button>
+                
+                </div>
+                <div>
+                <p> Your BMR is:{this.state.BMR} </p>
+                <p> Your TDEE is:{this.state.TDEE} </p>
+                </div>
+
+                <div className="form-group text-center">
+                  <button className="btn btn-primary btn-md align-center">
+                    Save to Profile
+                  </button>
+                </div>
+              </form>
+              <h1>
+                Need to Register?<Link data-dismiss="modal" to="/Registration">
+                  click here
+                </Link>
+              </h1>
+            </div>

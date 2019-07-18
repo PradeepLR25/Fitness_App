@@ -1,0 +1,18 @@
+.help-block{
+    color: red;
+}
+
+.label-col{
+    font-size: 1.25vw;
+    font-weight: bold;
+}
+
+
+
+.form-border{
+    width: 100%;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 12px;
+  }
